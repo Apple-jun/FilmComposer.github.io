@@ -56,3 +56,17 @@
     font-size: 1rem; 
   }
 }
+
+/* 会议信息样式 */
+.conference-info {
+  font-size: 1.25rem;    /* 与 Bulma 的 is-4 同级字号一致 */
+  font-weight: 700;      /* 加粗效果 */
+  color: #FF69B4;        /* 粉色 (#FF69B4 是标准的 hotpink) */
+  letter-spacing: 0.5px; /* 可选：轻微字间距提升可读性 */
+  margin: -0.5rem 0 1rem; /* 微调间距适应现有布局 */
+}
+
+/* 如果使用 Bulma 的颜色系统 */
+.has-text-pink {
+  color: #FF69B4 !important;
+}
