@@ -52,25 +52,24 @@
   }
 
   .video-grid {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 5px; 
-    justify-content: center; 
-    margin: 0; 
-    padding: 0; 
+    display: flex !important; /* 覆盖原有布局 */
+    flex-wrap: nowrap; /* 禁止换行 */
+    overflow-x: auto; /* 允许横向滚动 */
+    padding: 0 -10%; /* 保持左右留白 */
+    gap: 8px; /* 减少间隙 */
   }
   
-  .video-grid .column {
-    flex: 0 0 calc(20% - 5px); 
-    max-width: calc(20% - 5px); 
+  .video-grid .column.is-2 {
+    flex: 0 0 calc(16.666% - 8px); /* 调整间隙补偿 */
+    width: calc(16.666% - 8px);
+    min-width: 160px; /* 设置最小宽度 */
+    margin: 0;
+    padding: 0 4px; /* 改用内边距控制间距 */
   }
-
   
   video {
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 100%;
+    min-height: 120px; /* 保证最小可视区域 */
   }
 
 
